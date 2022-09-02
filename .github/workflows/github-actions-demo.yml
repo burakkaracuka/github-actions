@@ -1,6 +1,8 @@
 name : github-actionss
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  docker-build:
     runs-on: ubuntu-20.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
