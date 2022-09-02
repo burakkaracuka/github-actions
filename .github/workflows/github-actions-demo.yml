@@ -19,12 +19,12 @@ jobs:
       - name: Docker Build
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/ex-1 .
- 
-  docker-push:
-    runs-on: ubuntu-20.04
-    needs: docker-build
-    steps:
-      - name: Docker Push
-        run: |
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/ex-1 
+# docker-push:
+ #   runs-on: ubuntu-20.04
+ #   needs: docker-build
+ #   steps:
+ #     - name: Docker Push
+ #       run: |
+ #         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/ex-1 
       
